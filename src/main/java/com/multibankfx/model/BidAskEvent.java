@@ -1,4 +1,4 @@
-package com.multibankfx.ingestion;
+package com.multibankfx.model;
 
 public record BidAskEvent(String symbol,
                           double bid,

@@ -17,4 +17,13 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
     properties:
       spring.json.trusted.packages: "*"
-      spring.json.value.default.type: com.multibankfx.ingestion.BidAskEvent
+      spring.json.value.default.type: com.multibankfx.model.BidAskEvent
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/candle_service
+    username: postgres
+    password: password
+
+  sql:
+    init:
+      mode: never
