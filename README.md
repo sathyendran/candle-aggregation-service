@@ -298,7 +298,10 @@ The Candle Aggregation Service is a production-grade, scalable, event-driven sys
 It provides:
 
 ✔ High throughput ingestion
+
 ✔ Exactly-once historical aggregation
+
 ✔ Efficient multi-timeframe rollups
+
 ✔ Real-time API transparency
 
