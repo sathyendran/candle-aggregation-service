@@ -11,4 +11,19 @@ public final class Query {
             )
             VALUES (?, ?, ?, ?);
      """;
+
+    public static final  String getCandle = """
+            SELECT
+                (EXTRACT(EPOCH FROM bucket) * 1000)::BIGINT AS time,
+                open,
+                high,
+                low,
+                close,
+                volume
+            FROM %s
+            WHERE symbol = ?
+              AND bucket >= ?
+              AND bucket <= ?
+            ORDER BY bucket;
+           """;
 }
